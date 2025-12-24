@@ -127,20 +127,31 @@ fun Login(nav: NavHostController) {
 fun Home(remember: Boolean) {
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
 
+        Text(
+            text = "Home Page",
+            fontSize = 30.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
         if (remember) {
             Text(
                 text = "Welcome User",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Medium
             )
         }
     }
 }
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
